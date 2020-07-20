@@ -1,0 +1,241 @@
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    height: 100%;
+}
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.4;
+}
+
+#root {
+    background-color: rgba(0, 0, 0, 0.85);
+    display: flex;
+    flex-direction: column;
+}
+
+.Header {
+    color: cornsilk;
+}
+
+.navbar {
+    height: 30px;
+    padding-top: 0px!important;
+    padding-bottom: 0px!important;
+}
+  
+.navbar-brand {
+    margin: 0;
+    height: 30px;
+    line-height: 30px;
+}
+  
+.navbar-toggle {
+    margin-top: 0px;
+    padding: 0px 0px !important;
+}
+
+.nav-link {
+    color: cornsilk !important;
+    height: 30px;
+    padding: 0 25px !important;
+}
+.nav-link:hover {
+    background-color: #ebf1af33;
+}
+
+.Footer {
+    position: relative;
+    min-height: 50vh;
+    text-align: center;
+    color: cornsilk;
+}
+
+.Footer h1 {
+    margin: 0 !important;
+}
+
+Section {
+    min-height: 40vh;
+    width: 100%;
+}
+
+h1 {
+    margin-top: 1% !important;
+    margin-bottom: 1% !important;
+    font-weight: bold !important;
+    white-space: nowrap;
+}
+
+.grad-bg {
+    background-image: linear-gradient(rgb(33,37,41),rgba(200,200,200,0.5),#eeeeee);
+}
+
+.my-form > .form-control {
+    margin-bottom: 20px;
+}
+
+.blueHeadBg, .greenHeadBg, .orangeHeadBg {
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 1% 0;
+    color: #fff;
+}
+
+.blueHeadBg {
+    background-image: url('./Image/blueHeadBg.png');
+}
+
+.greenHeadBg {
+    background-image: url('./Image/greenHeadBg.png');
+}
+
+.orangeHeadBg {
+    background-image: url('./Image/orangeHeadBg.png');
+}
+
+.white-bg {
+    background-color: #fffffa;
+}
+
+.gray-bg {
+    background-color: #eeeeee
+}
+
+.white-text {
+    color: cornsilk;
+}
+
+.yellow-text {
+    color: #ff9900
+}
+
+.fa-bars {
+    color: cornsilk;
+}
+
+.card-holder {
+    margin: 5px 0;
+    padding: 0 5px!important;
+}
+
+.card {
+    z-index: 15;
+    padding: 5px;
+    transition: 500ms;
+}
+
+.card:hover {
+    color: #fff;
+    background-color: rgba(10, 20, 30, 0.75);
+}
+
+#top-bar {
+    background-image: url('./Image/headBg.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 10px 5px;
+}
+
+#category-next, #category-prev {
+    background-color: rgb(23, 52, 216);
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+    color: cornsilk;
+}
+
+.button-container {
+    margin: auto;
+}
+
+.btn-dark:hover {
+    background-color: rgba(28, 58, 87, 0.7)!important;
+}
+
+.categoryBox {
+    background-image: linear-gradient(#ebf1af,#55304d45,#55536960);
+    padding: 30px 2px;
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 10px;
+    transition: 500ms;
+}
+
+.categoryBox:hover {
+    background-image: linear-gradient(#253b3ba5,#66302a43,#66511350);
+}
+
+.form-control:focus {
+    border: none;
+    box-shadow: inset 0 0px 0px #212529, 0 0 5px #212529 !important;
+}
+
+[data-action] {
+    display: none;
+}
+/* animation */
+
+/* If the screen size is 768px wide or less(small), set the font-size of <div> to 30px */
+@media screen and (max-width: 768px) {
+    h1 {
+        font-size: 5vw !important;
+    }
+    h4 {
+        font-size: 2vh !important;
+    }
+    .why-work-heading {
+        color: #333;
+        text-shadow: #000;
+        text-align: right;
+    }
+    .Footer {
+        padding: 25% 1% 5% 1%;
+    }
+}
+
+/* medium and large screen */
+@media screen and (min-width: 768px) {
+    h1 {
+        font-size: 3vw !important;
+    }
+    h4 {
+        font-size: 3vh !important;
+    }
+    .Footer {
+        padding: 10% 1% 5% 1%;
+    }
+}
+
+/* extra large screen */
+@media screen and (min-width: 1200px) {
+
+}
+
+@keyframes swing-anim-left {
+    0% {margin-left: -40%;}
+    25% {margin-left: 20%;}
+    100% {margin-left: 0%;}
+}
+
+.swing-left[data-scroll="in"] {
+    animation-name: swing-anim-left;
+    animation-duration: 2s;
+}
+
+@keyframes swing-anim-right {
+    0% {margin-left: 40%;}
+    25% {margin-left: -10%;}
+    100% {margin-left: 0%;}
+}
+
+.swing-right[data-scroll="in"] {
+    animation-name: swing-anim-right;
+    animation-duration: 2s;
+}
+
+@import '~bootstrap/scss/bootstrap';
